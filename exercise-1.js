@@ -1,22 +1,32 @@
 // Q1
 // Write a function called `sum` that takes two
 // parameters and returns the sum of those 2 numbers.
-
-
+	
+function sum(num1, num2) {
+	var total = Number(num1) + Number(num2)
+	return total
+}
 
 
 // Q2
 // Write a function named `avg` that takes 3 parameters
 // and returns the average of those 3 numbers.
 
-
+function avg(num1, num2, num3) {
+	var total = Number(num1) + Number(num2) + Number(num3)
+	var avg = total / 3
+	return avg;
+}
 
 
 // Q3
 // Write a function called `getLength` that takes one
 // parameter (a string) and returns the length
 
-
+function getLength(word) {
+	var l = word.length
+	return l
+}
 
 
 // Q4
