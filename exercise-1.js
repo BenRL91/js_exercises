@@ -35,7 +35,10 @@ function getLength(word) {
 // parameter is greater than the first. Otherwise
 // the function should return `false`.
 
-
+function greaterThan(num1, num2) {
+	var isGreater = num1 > num2
+	return isGreater;
+}
 
 
 // Q5
@@ -44,7 +47,9 @@ function getLength(word) {
 // is formated like "Hello, Name!" where *Name*
 // is the parameter that was passed in.
 
-
+function greet(name) {
+	alert("Hello, " + name + "!")
+}
 
 
 // Q6
@@ -57,3 +62,8 @@ function getLength(word) {
 // strings. For example:
 // words: "quick", "fox", "fence"
 // sentence: "quick brown fox jumps over the fence"
+
+function madlib(noun1, adj, noun2, verb) {
+	var sentence = "The big " + noun1 + " is so " + adj + " that I think " + noun2 + " should " + verb + " it."
+	return sentence;
+}
