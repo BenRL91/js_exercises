@@ -3,8 +3,7 @@
 // parameters and returns the sum of those 2 numbers.
 	
 function sum(num1, num2) {
-	var total = Number(num1) + Number(num2)
-	return total
+	  return Number(num1) + Number(num2)
 }
 
 
