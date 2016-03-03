@@ -78,7 +78,7 @@ function reverse(words){
 //INCOMPLETE
 function findLongestWord(words){
     words.filter(function (word){
-        return word.length > word[++1].length
+        return word.length > 2
     });
 }
 // ---------------------
