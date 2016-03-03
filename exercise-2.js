@@ -16,13 +16,16 @@ function max(num1, num2){
 
 function maxOfThree(num1, num2, num3) {
     //...
-    if (num1 > num2) 
-    	{return num1} 
-    else if (num1 > num3) 
-    	{return num2}
-    else (num2 < num3) 
-    	{return num3}
-}
+    if (num1 > num2 && num1 > num3) {
+    	return num1
+    }
+    else if (num2 > num3) {
+    	return num2
+    }
+    else {
+    	return num3
+    }
+ }
 
 // ---------------------
 // Write a function that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise.
@@ -30,10 +33,9 @@ function maxOfThree(num1, num2, num3) {
 
 function isVowel(char){
     //...
-    if (char === "a", "e", "i", "o", "u", "A", "E", "I", "O", "U") {
+    if (char === "a" || char === "e" || char === "i" || char === "o" || char === "u" || char === "A" || char === "E" || char === "I" || char === "O" || char === "U") {
     	return true
-    }
-    else {
+    }else {
     	return false
     }
 }
@@ -42,10 +44,20 @@ function isVowel(char){
 // Write a function translate() that will translate a text into "rÃ¶varsprÃ¥ket". That is, double every consonant and place an occurrence of "o" in between. For example, translate("this is fun") should return the string "tothohisos isos fofunon".
 // ---------------------
 
-function rovarspraket(phrase){
-    //...
+function translate(phrase) {
+	var phraseApart = phrase.split('')
+	var translatePhrase = phraseApart.map(function (currentLetter) {
+		if (currentLetter !== 'a' && currentLetter !== "e" && currentLetter !== "i" && currentLetter !== "o" && currentLetter !== "u" 
+			&& currentLetter !== "A" && currentLetter !== "E" && currentLetter !== "I" && currentLetter !== "O" && currentLetter !== "U" && currentLetter !== " ") {
+			return currentLetter + "o" + currentLetter
+		}else {
+			return currentLetter
+		}
+	});
+	var phraseTogether = translatePhrase.reduce(function (item, currentNewLetter) {
+		return item + currentNewLetter
+	}); return phraseTogether
 }
-
 
 // ---------------------
 // Define a function reverse() that computes the reversal of a string. For example, reverse("jag testar") should return the string "ratset gaj".
@@ -69,6 +81,9 @@ function findLongestWord(words){
 
 function filterLongWords(words, i){
     //...
+    words.filter(function(word) {
+  return word.length > i;
+});
 }
 
 // ---------------------

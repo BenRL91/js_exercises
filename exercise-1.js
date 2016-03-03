@@ -35,7 +35,7 @@ function getLength(word) {
 // the function should return `false`.
 
 function greaterThan(num1, num2) {
-	var isGreater = num1 > num2
+	var isGreater = num1 < num2
 	return isGreater;
 }
 
