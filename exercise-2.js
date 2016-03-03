@@ -63,8 +63,12 @@ function translate(phrase) {
 // Define a function reverse() that computes the reversal of a string. For example, reverse("jag testar") should return the string "ratset gaj".
 // ---------------------
 
-function reverse(){
-    //...
+function reverse(words){
+	var lettersArray = words.split('')
+	lettersArray.reverse() //found reverse in online research
+	return lettersArray.reduce(function (item, revWord){
+		return item + revWord
+	});
 }
 
 // ---------------------
@@ -73,6 +77,7 @@ function reverse(){
 
 function findLongestWord(words){
     //...
+   
 }
 
 // ---------------------
@@ -80,10 +85,7 @@ function findLongestWord(words){
 // ---------------------
 
 function filterLongWords(words, i){
-    //...
-    words.filter(function(word) {
-  return word.length > i;
-});
+	
 }
 
 // ---------------------
